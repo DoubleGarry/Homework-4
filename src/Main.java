@@ -56,12 +56,10 @@ public class Main {
     public static void task5() {
         System.out.println("Задача 5");
         int childAge = 7 ;
-
         if (childAge < 5) {
             System.out.println("Если возраст ребенка равен " + childAge + " годам, то он не может кататься на аттракционе");
         }
         boolean youngMan = childAge >=5 && childAge < 14;
-
         if (youngMan) {
             System.out.println("Если возраст ребенка равен " + childAge + " годам, то он может кататься на аттракционе в сопровождении взрослого");
         }
@@ -75,6 +73,21 @@ public class Main {
     }
     public static void task6() {
         System.out.println("Задача 6");
+        int totalPlaces = 102;
+        int totalSeatPlaces = 60;
+        int totalStandPlaces = totalPlaces - totalSeatPlaces;
+        int usedSeat = 60;
+        int usedStand = 42;
+        int emptySeatPlaces = totalSeatPlaces - usedSeat;
+        int emptyStandPlaces = totalStandPlaces - usedStand;
+        if (emptySeatPlaces < 60 || emptyStandPlaces < 42) {
+            System.out.println("В вагоне свободны " + emptySeatPlaces + " сидячих и " + emptyStandPlaces + " стоячих мест");
+        }
+        else if (emptySeatPlaces == 60 || emptyStandPlaces == 42){
+            System.out.println("Вагон переполнен!");
+        }
+
+
 
 
     }
