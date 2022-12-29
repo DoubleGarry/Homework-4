@@ -6,6 +6,7 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
 
     }
     public static void task1() {
@@ -78,18 +79,23 @@ public class Main {
         int totalStandPlaces = totalPlaces - totalSeatPlaces;
         int usedSeat = 60;
         int usedStand = 42;
-        int emptySeatPlaces = totalSeatPlaces - usedSeat;
-        int emptyStandPlaces = totalStandPlaces - usedStand;
-        if (emptySeatPlaces < 60 || emptyStandPlaces < 42) {
-            System.out.println("В вагоне свободны " + emptySeatPlaces + " сидячих и " + emptyStandPlaces + " стоячих мест");
+        int freeSeat = totalSeatPlaces - usedSeat;
+        int freeStand = totalStandPlaces - usedStand;
+        boolean overloading = freeSeat <= usedSeat && freeStand <= usedStand;
+        if (overloading) {
+            System.out.println("Вагон переполнен!"); }
+        else if (freeSeat > usedSeat || freeStand > usedStand) {
+            System.out.println("В вагоне свободны " + freeSeat + " сидячих и " + freeStand + " стоячих мест");
         }
-        else if (emptySeatPlaces == 60 || emptyStandPlaces == 42){
-            System.out.println("Вагон переполнен!");
+    }
+    public static void task7(){
+        System.out.println("Задача 7");
+        int one = 1;
+        int two = 2;
+        int three = 3;
+        if (two < three || one < three) {
+            System.out.println(three + " больше " + two + " и больше " + one);
         }
-
-
-
-
     }
 
 }
